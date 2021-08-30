@@ -4,7 +4,7 @@
   "description": "FatBellies Restaurant API",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "NODE_ENV=test jest --testTimeout=10000 --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,11 @@
     "jest": "^27.1.0",
     "superagent": "^6.1.0",
     "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
