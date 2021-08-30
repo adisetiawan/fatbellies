@@ -7,9 +7,9 @@
   "info" : {
     "description" : "This is fatbellies API",
     "version" : "1.0.0",
-    "title" : "Simple Inventory API",
+    "title" : "Simple fatbellies API",
     "contact" : {
-      "email" : "you@your-company.com"
+      "email" : "adisetiawan@gmail.com.com"
     },
     "license" : {
       "name" : "Apache 2.0",
@@ -149,6 +149,15 @@
           }
         },
         "type" : "object"
+      },
+      "Branch" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }
       }
     }
   }
