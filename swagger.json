@@ -27,8 +27,8 @@
     "/branch" : {
       "get" : {
         "tags" : [ "public" ],
-        "summary" : "searches inventory",
-        "operationId" : "searchInventory",
+        "summary" : "searches branch",
+        "operationId" : "searchBranch",
         "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
         "parameters" : [ {
           "in" : "query",
