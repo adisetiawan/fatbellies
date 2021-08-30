@@ -62,11 +62,12 @@ router.get('/', async (req, res, next) => {
         let filteredSessions = sessions.filter(async (session) => {
           let isMaxedOut = await isMaxOut(session.id);
           if(!isMaxedOut) {
-            return session;
+            if(session.onDemand == true) {
+              return session;
+            }
+            
           }
         });
-        //then check for on-demand
-
 
         res.json({ data: filteredSessions });
       } else {
