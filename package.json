@@ -4,7 +4,7 @@
   "description": "FatBellies Restaurant API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,10 @@
     "joi": "^17.4.2",
     "sequelize": "^6.6.5",
     "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0",
+    "superagent": "^6.1.0",
+    "supertest": "^6.1.6"
   }
 }
