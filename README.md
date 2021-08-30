@@ -2,6 +2,8 @@
 
 FatBellies Restaurant REST API, backed by SQLite using sequelize, cached by Redis
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Pre-requisites
 
 * NodeJS

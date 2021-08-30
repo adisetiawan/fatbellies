@@ -1,0 +1,7 @@
+{
+  "name": "Fatbellies Restaurant API",
+  "description": "simple fatbellies restaurant API",
+  "repository": "https://github.com/adisetiawan/fatbellies",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "api"]
+}
