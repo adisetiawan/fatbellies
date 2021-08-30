@@ -17,7 +17,6 @@ FatBellies Restaurant REST API, backed by SQLite using sequelize, cached by Redi
 ## Running
 
 * Main server `nodemon server.js`
-* Pubsub service `nodemon pubsub.js`
 
 ## Testing
 

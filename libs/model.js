@@ -19,6 +19,10 @@ const Branch = sequelize.define('Branch', {
     type: DataTypes.STRING,
     allowNull: true
   },
+  isActive: {
+    type: DataTypes.INTEGER,
+    defaultValue: 1
+  },
 }, {
   validate: {
     bothCoordsOrNone() {
@@ -39,6 +43,10 @@ const Guest = sequelize.define('Guest', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  isActive: {
+    type: DataTypes.INTEGER,
+    defaultValue: 1
+  },
 }, {
 
 });
@@ -52,6 +60,10 @@ const Meal = sequelize.define('Meal', {
   name: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  isActive: {
+    type: DataTypes.INTEGER,
+    defaultValue: 1
   },
 }, {
 
@@ -90,7 +102,7 @@ const Session = sequelize.define('Session', {
     allowNull: false
   },
   day: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   timeStart: {
