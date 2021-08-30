@@ -20,13 +20,13 @@
     "name" : "admins",
     "description" : "Secured Admin-only calls"
   }, {
-    "name" : "developers",
-    "description" : "Operations available to regular developers"
+    "name" : "public",
+    "description" : "Operations available to regular"
   } ],
   "paths" : {
-    "/inventory" : {
+    "/branch" : {
       "get" : {
-        "tags" : [ "developers" ],
+        "tags" : [ "public" ],
         "summary" : "searches inventory",
         "operationId" : "searchInventory",
         "description" : "By passing in the appropriate options, you can search for\navailable inventory in the system\n",
@@ -66,7 +66,7 @@
                 "schema" : {
                   "type" : "array",
                   "items" : {
-                    "$ref" : "#/components/schemas/InventoryItem"
+                    "$ref" : "#/components/schemas/Branch"
                   }
                 }
               }
@@ -79,8 +79,8 @@
       },
       "post" : {
         "tags" : [ "admins" ],
-        "summary" : "adds an inventory item",
-        "operationId" : "addInventory",
+        "summary" : "adds an branch",
+        "operationId" : "addBranch",
         "description" : "Adds an item to the system",
         "responses" : {
           "201" : {
@@ -97,7 +97,7 @@
           "content" : {
             "application/json" : {
               "schema" : {
-                "$ref" : "#/components/schemas/InventoryItem"
+                "$ref" : "#/components/schemas/Branch"
               }
             }
           },
