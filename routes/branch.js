@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const redis = require('../libs/redis');
+
 const { Branch } = require('../libs/model');
 
 const Joi = require('joi');
@@ -40,6 +42,11 @@ router.post('/', async (req, res, next) => {
     const value = await postSchema.validateAsync(req.body);
     const newBranch = await Branch.create(value);
 
+    if(newBranch) {
+      //add to redis
+      await redis.geoadd('branch', newBranch.longitude, newBranch.latitude, newBranch.id);
+    }
+
     res.json({ data: newBranch });
   
   } catch(e) {
@@ -58,6 +65,14 @@ router.put('/:id', async (req, res, next) => {
         id: parseInt(req.params.id),
       }
     });
+
+    if(branch) {
+      if(value.longitude != '' && value.latitude != '') {
+        //update to redis
+        await redis.geoadd('branch', value.longitude, value.latitude, value.id);
+      }
+      
+    }
 
     res.json({ data: branch });
 

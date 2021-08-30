@@ -21,12 +21,14 @@ const guest = require('./routes/guest');
 const meal = require('./routes/meal');
 const session = require('./routes/session');
 const reservation = require('./routes/reservation');
+const search = require('./routes/search');
 //get all available routes
 app.use('/branch', branch);
 app.use('/guest', guest);
 app.use('/meal', meal);
 app.use('/session', session);
 app.use('/reservation', reservation);
+app.use('/search', search);
 
 //handle error
 app.use((err, req, res, next) => {
