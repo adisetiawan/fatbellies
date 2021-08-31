@@ -146,9 +146,9 @@ const Reservation = sequelize.define('Reservation', {
 });
 
 
-// (async () => {
-//   await sequelize.sync();
-// })();
+(async () => {
+  await sequelize.sync({ force: true });
+})();
 
 exports.Branch = Branch;
 exports.Guest = Guest;
